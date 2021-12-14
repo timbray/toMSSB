@@ -11,6 +11,8 @@ import (
 const MSSBCA = 0x1D5D4
 // MSSBSA MATHEMATICAL SANS-SERIF BOLD SMALL A
 const MSSBSA = 0x1D5EE
+// SSBONE MATHEMATICAL SANS-SERIF BOLD DIGIT ZERO
+const MSSBONE = 0x1D7EC
 
 func main() {
 	if len(os.Args) > 1 {
@@ -44,6 +46,9 @@ func toMSSBC(in string) string {
 			line = oneASCII(r, line)
 		} else if (c >= 'a' && c <= 'z') {
 			r := int32(int(c-'a') + MSSBSA)
+			line = oneASCII(r, line)
+		} else if (c >= '0' && c <= '9') {
+			r := int32(int(c-'0') + MSSBONE)
 			line = oneASCII(r, line)
 		} else {
 			line = append(line, c)
