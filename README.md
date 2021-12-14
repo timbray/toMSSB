@@ -1,10 +1,11 @@
 # toMSSB
 
-Processes text, converting alphabetic ASCII letters (**a** 
-through **z** 
-and **A** through **Z**) into their equivalents in Unicode's 
-MATHEMATICAL SANS-SERIF BOLD range, starting at 0x1D5D4 and
-0x1D5EE for capital and lower-case respectively.  
+Processes text, converting alphabetic ASCII letters
+and digits (**a** through **z**, 
+**A** through **Z**, and **0** through **9**) into their 
+equivalents in Unicode's MATHEMATICAL SANS-SERIF BOLD 
+range, starting at 0x1D5D4 and 0x1D5EE for capital and 
+lower-case letters, and 0x1D7EC for numeric digits.
 
 All other characters are left as-is.
 
